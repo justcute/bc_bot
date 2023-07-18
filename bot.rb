@@ -74,7 +74,7 @@ Telegram::Bot::Client.run(token) do |bot|
 			if scheduler_running
         bot.api.send_message(chat_id: message.chat.id, text: "The scheduler is already running.")
       else
-        scheduler.every '3m' do
+        scheduler.every '2m' do
           begin
             parsed_data = parse_website
 
